@@ -5,7 +5,7 @@ Authors@R:
     person(give = "Aaron", 
            family = "Butler", 
            role = c("aut", "cre"),
-           email = "aaronbutlerphd@gmail.com"
+           email = "aaronbutlerphd@gmail.com",
            comment = c(ORCID = "0000-0003-0433-3083"))
 Description: Performance history data from all known concerts of the New York Philharmonic. Data were collected and made available by the New York Philharmonic.
 License: MIT + file LICENSE
