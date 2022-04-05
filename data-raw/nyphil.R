@@ -63,5 +63,6 @@ unnest_soloists <- function(.programID) {
 # Create dataset of soloists
 nyphil <- map_df(programsID_list, unnest_soloists)
 
+nyphil <- nyphil %>% select(-soloists)
 
 usethis::use_data(nyphil, overwrite = TRUE)
