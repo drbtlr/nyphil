@@ -9,17 +9,17 @@ template:
       google: Sen
     code_font:
       google: DM Mono
-    bg: '#fff'
+    bg: '#ffffff'
     fg: '#333333'
-    primary: '#991d65'
-    secondary: '#faf2f3'
+    primary: '#ffffff'
+    secondary: '#ffffff'
     headings-color: '#991d65'
     link-color: '#595959'
-    link-hover-color: '#bd1d77'
+    link-hover-color: '#187BA2'
     navbar-bg: '#991d65'
     navbar-light-color: '#f1f3f2'
     navbar-light-brand-hover-color: '#991d65'
-    navbar-light-hover-color: '#bd1d77'
+    navbar-light-hover-color: '#fff'
 navbar:
   type: light
   bg: '#991d65'
