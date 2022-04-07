@@ -1,0 +1,45 @@
+url: https://drbtlr.github.io/nyphil/
+authors:
+  Aaron Butler:
+    href: https://www.aaronjbutler.com
+template:
+  bootstrap: 5
+  bslib:
+    base_font:
+      google: Sen
+    code_font:
+      google: DM Mono
+    bg: '#fff'
+    fg: '#333333'
+    primary: '#991d65'
+    secondary: '#faf2f3'
+    headings-color: '#991d65'
+    link-color: '#595959'
+    link-hover-color: '#bd1d77'
+    navbar-bg: '#991d65'
+    navbar-light-color: '#f1f3f2'
+    navbar-light-brand-hover-color: '#991d65'
+    navbar-light-hover-color: '#bd1d77'
+navbar:
+  type: light
+  bg: '#991d65'
+  structure:
+    left: home
+    right:
+    - reference
+    - news
+    - github
+  components:
+    news:
+      text: News
+      href: news/index.html
+reference:
+- title: Dataset
+  desc: |
+    Dataset from [New York Philharmonic](http://archives.nyphil.org/performancehistory). <br><br> This dataset is most useful for making tables or plots. The dataset is stored as a tibble in tidy format.  All variables are cast to the proper variable type, and all variable names are in `snake_case`.
+  contents: nyphil
+- title: Raw dataset
+  desc: |
+    Dataset from [New York Philharmonic](http://archives.nyphil.org/performancehistory). <br><br> This dataset is most useful for practicing data processing techniques with json data. The data is stored in a list format. All variable names are in `camel_case`.
+  contents: nyphil_raw
+
