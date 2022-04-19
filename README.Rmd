@@ -11,6 +11,9 @@ knitr::opts_chunk$set(
   fig.path = "man/figures/README-",
   out.width = "100%"
 )
+
+library(tidyverse)
+library(nyphil)
 ```
 
 # nyphil <img src='man/figures/logo.png' align="right" height="138" />
@@ -27,4 +30,20 @@ You can install the development version of nyphil from [GitHub](https://github.c
 ``` r
 # install.packages("remotes")
 remotes::install_github("drbtlr/nyphil")
+```
+
+## About the data
+
+The `nyphil` package contains performance history data from all known concerts of the [New York Philharmonic](https://nyphil.org/). Data were collected and made available by the [New York Philharmonic Archives](https://archives.nyphil.org/index.php/open-data).
+
+There are two datasets included in the package. The dataset `nyphil` is a lightly-cleaned, tidy version of the raw data; see `?nyphil` for more info.
+
+```{r example-nyphil}
+dplyr::glimpse(nyphil)
+```
+
+The dataset `nyphil_raw` contains all the variables and original names as downloaded; see `?nyphil_raw` for more info.
+
+```{r example-nyphil-raw}
+dplyr::glimpse(nyphil_raw)
 ```
