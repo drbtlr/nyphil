@@ -39,11 +39,41 @@ The `nyphil` package contains performance history data from all known concerts o
 There are two datasets included in the package. The dataset `nyphil` is a lightly-cleaned, tidy version of the raw data; see `?nyphil` for more info.
 
 ```{r example-nyphil}
+library(nyphil)
 dplyr::glimpse(nyphil)
 ```
 
 The dataset `nyphil_raw` contains all the variables and original names as downloaded; see `?nyphil_raw` for more info.
 
-```{r example-nyphil-raw}
-dplyr::glimpse(nyphil_raw)
+## Example
+
+Users are encouraged to use these datasets for exploration, learning, and fun.
+
+```{r data-viz, echo=FALSE}
+plot_dta <- nyphil %>% 
+  select(program_id, event_type, season, composer_name) %>%
+  group_by(season, composer_name) %>%
+  distinct() %>% 
+  ungroup()
+
+plot_dta %>% 
+  separate(composer_name, c("first", "last"), ",  ") %>% 
+  mutate(composer_name = paste(last, first)) %>% 
+  count(composer_name, sort = TRUE) %>% 
+  top_n(20) %>% 
+  ggplot(aes(fct_reorder(composer_name, n), n)) + 
+  geom_col(fill = "#991d65") +
+  geom_text(aes(label = n), hjust = 1.2, color = "white") +
+  coord_flip() +
+  theme_minimal() +
+  theme(
+    panel.grid = element_blank(),
+    axis.text.x = element_blank(),
+    plot.title = element_text(size = 18, face = "bold"),
+    plot.subtitle = element_text(size = 16, face = "bold"),
+    plot.title.position = "plot"
+  ) +
+  labs(title = "Composers with the most performances",
+       subtitle = "From 1842-43 to 2021-22",
+       x = NULL, y = NULL)
 ```
