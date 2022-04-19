@@ -32,6 +32,7 @@ info.
 
 ``` r
 library(nyphil)
+
 dplyr::glimpse(nyphil)
 #> Rows: 154,988
 #> Columns: 16
@@ -61,9 +62,6 @@ as downloaded; see `?nyphil_raw` for more info.
 Users are encouraged to use these datasets for exploration, learning,
 and fun.
 
-    #> Warning: Expected 2 pieces. Missing pieces filled with `NA` in 1371 rows [77,
-    #> 97, 119, 126, 290, 515, 517, 519, 528, 530, 804, 902, 1307, 1581, 1857, 1960,
-    #> 2124, 2210, 2211, 2228, ...].
     #> Selecting by n
 
 <img src="man/figures/README-data-viz-1.png" width="100%" />
