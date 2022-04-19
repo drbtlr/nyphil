@@ -50,7 +50,7 @@ The dataset `nyphil_raw` contains all the variables and original names as downlo
 
 Users are encouraged to use these datasets for exploration, learning, and fun.
 
-```{r data-viz, echo=FALSE, warning=FALSE}
+```{r data-viz, echo=FALSE, warning=FALSE,message=FALSE}
 plot_dta <- nyphil %>% 
   select(program_id, event_type, season, composer_name) %>%
   group_by(season, composer_name) %>%

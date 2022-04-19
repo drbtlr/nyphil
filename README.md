@@ -62,6 +62,4 @@ as downloaded; see `?nyphil_raw` for more info.
 Users are encouraged to use these datasets for exploration, learning,
 and fun.
 
-    #> Selecting by n
-
 <img src="man/figures/README-data-viz-1.png" width="100%" />
